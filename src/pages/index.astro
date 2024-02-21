@@ -1,17 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Badge from '../components/Badge.astro'
+import imgProfile from '../assets/images/profile.jpg'
+import LinkedInIcon from '../assets/icons/LinkedIn.astro'
+import SocialPills from '../components/SocialPills.astro'
+import GithubIcon from '../assets/icons/GitHub.astro'
+import MailIcon from '../assets/icons/Mail.astro'
 ---
 
 <Layout pageTitle='Home' pageContent='Portfolio Jovan Lopez'>
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
+		<section class="w-full px-20 py-44">
+			<img src={imgProfile.src} class="size-12 rounded-full mb-5" alt="Jovan Lopez Image Profile">
 			<h1 class=" text-white text-5xl font-bold flex flex-row  gap-x-4 pb-4">Jovan Lopez 
-				<div class="flex justify-center items-center">
+				<a href="google.com" target="_blank" rel="noopener" class="flex justify-center items-center">
 					<Badge>Disponible para trabajar</Badge>
-				</div>
+				</a>
 			</h1>
-			<h2 class="text-xl opacity-80">+3 años de experiencia. Desarrollador web y creador de contenido. De San Luis Potosi, Mexico. Especializado en construir aplicaciones que resuelvan  y autoamatizen procesos en las empresas.</h2>	
+			<h2 class="text-xl opacity-80">+3 años de experiencia. <span class="text-amber-300">Desarrollador web y creador de contenido.</span> De San Luis Potosi, Mexico. Especializado en construir aplicaciones que resuelvan  y autoamatizen procesos en las empresas.</h2>	
+
+			<nav class="flex gap-x-4 mt-8">
+				
+				<SocialPills href="linkedin" >
+					<LinkedInIcon class="w-4 h-4"/>
+					LinkedIn
+				</SocialPills>
+
+				<SocialPills href="github" >
+					<GithubIcon class="w-4 h-4" />
+					GitHub
+				</SocialPills>
+
+				<SocialPills href="mail" >
+					<MailIcon class="w-5 h-5" />
+					everest.studio32@gmail.com
+				</SocialPills>
+				
+			</nav>
 		</section>
 	</main>
 </Layout>
