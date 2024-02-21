@@ -6,11 +6,13 @@ import LinkedInIcon from '../assets/icons/LinkedIn.astro'
 import SocialPills from '../components/SocialPills.astro'
 import GithubIcon from '../assets/icons/GitHub.astro'
 import MailIcon from '../assets/icons/Mail.astro'
+import Experience from '../components/Experience.astro'
+import SectionContainer from '../components/SectionContainer.astro'
 ---
 
 <Layout pageTitle='Home' pageContent='Portfolio Jovan Lopez'>
 	<main>
-		<section class="w-full px-20 py-44">
+		<SectionContainer>
 			<img src={imgProfile.src} class="size-12 rounded-full mb-5" alt="Jovan Lopez Image Profile">
 			<h1 class=" text-white text-5xl font-bold flex flex-row  gap-x-4 pb-4">Jovan Lopez 
 				<a href="google.com" target="_blank" rel="noopener" class="flex justify-center items-center">
@@ -35,8 +37,11 @@ import MailIcon from '../assets/icons/Mail.astro'
 					<MailIcon class="w-5 h-5" />
 					everest.studio32@gmail.com
 				</SocialPills>
-				
 			</nav>
-		</section>
+		</SectionContainer>
+
+		<SectionContainer>
+			<Experience/>
+		</SectionContainer>
 	</main>
 </Layout>
