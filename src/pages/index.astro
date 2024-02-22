@@ -8,20 +8,22 @@ import GithubIcon from '../assets/icons/GitHub.astro'
 import MailIcon from '../assets/icons/Mail.astro'
 import Experience from '../components/Experience.astro'
 import SectionContainer from '../components/SectionContainer.astro'
+import BriefcaseIcon from '../assets/icons/Briefcase.astro'
+import Footer from '../components/Footer.astro'
 ---
 
 <Layout pageTitle='Home' pageContent='Portfolio Jovan Lopez'>
-	<main>
-		<SectionContainer>
+	<main class="px-4">
+		<SectionContainer className="pt-44 pb-24">
 			<img src={imgProfile.src} class="size-12 rounded-full mb-5" alt="Jovan Lopez Image Profile">
-			<h1 class=" text-white text-5xl font-bold flex flex-row  gap-x-4 pb-4">Jovan Lopez 
+			<h1 class=" text-white text-3xl lg:text-5xl font-bold flex flex-row  gap-x-4 pb-4">Jovan Lopez 
 				<a href="google.com" target="_blank" rel="noopener" class="flex justify-center items-center">
-					<Badge>Disponible para trabajar</Badge>
+					<Badge>Available for work</Badge>
 				</a>
 			</h1>
-			<h2 class="text-xl opacity-80">+3 años de experiencia. <span class="text-amber-300">Desarrollador web y creador de contenido.</span> De San Luis Potosi, Mexico. Especializado en construir aplicaciones que resuelvan  y autoamatizen procesos en las empresas.</h2>	
+			<h2 class="text-md lg:text-xl opacity-80 text-pretty max-w-[700px]">+3 years of experience. <span class="text-yellow-300">Web developer and content creator</span>  from San Luis Potosi, Mexico. Specialized in building applications that solve and automate processes in companies.</h2>	
 
-			<nav class="flex gap-x-4 mt-8">
+			<nav class="flex gap-x-4 mt-8 text-sm flex-wrap gap-y-4">
 				
 				<SocialPills href="linkedin" >
 					<LinkedInIcon class="w-4 h-4"/>
@@ -33,15 +35,21 @@ import SectionContainer from '../components/SectionContainer.astro'
 					GitHub
 				</SocialPills>
 
-				<SocialPills href="mail" >
+				<SocialPills href="mailto:everest.studio32@gmail.com" >
 					<MailIcon class="w-5 h-5" />
 					everest.studio32@gmail.com
 				</SocialPills>
 			</nav>
 		</SectionContainer>
 
-		<SectionContainer>
+		<SectionContainer id='experience'>
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<BriefcaseIcon class="size-7" />
+				Experience
+			</h2>
 			<Experience/>
 		</SectionContainer>
+
+		<Footer />
 	</main>
 </Layout>
