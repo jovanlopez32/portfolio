@@ -1,5 +1,5 @@
 ---
-import Header from '../components/Header.astro'
+
 import '@fontsource/onest/100.css';
 import '@fontsource/onest/200.css';
 import '@fontsource/onest/300.css';
@@ -35,19 +35,12 @@ const {pageTitle, pageContent} = Astro.props
 </head>
 <body>
 
-    <div class="absolute top-0 -z-10 min-h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
-
-        
-    </div>
-    <Header />
-        <slot />
-
-    
+    <slot />
     
 </body>
 </html>
 
-<style is:global>
+<!-- <style is:global>
     :root {
         color-scheme: light dark;
     }
@@ -69,4 +62,4 @@ const {pageTitle, pageContent} = Astro.props
             scroll-behavior: auto;
         }
     }
-</style>
+</style> -->
