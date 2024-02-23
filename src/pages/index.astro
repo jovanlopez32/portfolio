@@ -1,22 +1,46 @@
 ---
+/* Icons */
+import GitHubIcon from '../assets/icons/GitHub.astro'
+import MailIcon from '../assets/icons/Mail.astro'
+import LinkedInIcon from '../assets/icons/LinkedIn.astro'
+/* Components */
 import Layout from '../layouts/Layout.astro'
-
+import ContactItems from '../components/ContactItems.astro'
 
 ---
 
 <Layout pageTitle='Home' pageContent='Portfolio Jovan Lopez'>
-	<main class="flex items-center justify-center gap-x-5 gap-y-10 mx-auto " >
-
-		<img src="./images/profile.jpg" class="h-64 rounded-tr-3xl rounded-bl-3xl rounded-tl-lg rounded-br-lg" alt="">
+	<main class="flex items-center justify-start lx:justify-center gap-x-5 gap-y-10 mx-auto px-10 xl:px-0 min-h-screen" >
+		<img src="./images/profile.jpg" class="h-72 rounded-tr-3xl rounded-bl-3xl rounded-tl-lg rounded-br-lg border-4 border-neutral-800" alt="">
 		
 		<div class="py-6 sm:py-8 lg:py-12">
 			<div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-			  <p class="mb-2 font-semibold text-sky-600 md:mb-3 lg:text-xl">Web Developer</p>
-		  
-			  <h2 class="mb-4 text-2xl font-bold text-neutral-800 md:mb-6 lg:text-6xl">Jovan Lopez</h2>
-		  
-			  <p class="max-w-screen-md text-gray-500 md:text-xl">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p>
+				<p class="mb-2 text-xl font-semibold text-sky-600 md:mb-3 lg:text-xl">Web Developer</p>
+			
+				<h2 class="mb-4 text-4xl font-bold text-neutral-800 md:mb-6 lg:text-6xl">Jovan Lopez</h2>
+			
+				<p class="max-w-screen-md text-lg text-neutral-900 md:text-xl text-pretty">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p>
+			
+				<div class="mt-7 flex items-center gap-x-5">
+					<ContactItems href="https://github.com/jovanlopez32" text="GitHub">
+						<GitHubIcon slot='svg' class="size-6" />
+					</ContactItems>
+
+					<ContactItems href="https://github.com/jovanlopez32" text="LinkedIn">
+						<LinkedInIcon slot='svg' class="size-6" />
+					</ContactItems>
+
+					<ContactItems href="https://github.com/jovanlopez32" text="everest.studio32@gmail.com">
+						<MailIcon slot='svg' class="size-6" />
+					</ContactItems>
+				</div>
 			</div>
+
+			
 		</div>
 	</main>
+
+	<section class="w-full max-w-7xl mx-auto min-h-screen bg-red-200">
+
+	</section>
 </Layout>
