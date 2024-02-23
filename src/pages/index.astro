@@ -1,10 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro'
 
+
 ---
 
 <Layout pageTitle='Home' pageContent='Portfolio Jovan Lopez'>
-	<main>
-		<h1>Hello world</h1>
+	<main class="flex items-center justify-center gap-x-5 gap-y-10 mx-auto " >
+
+		<img src="./images/profile.jpg" class="h-64 rounded-tr-3xl rounded-bl-3xl rounded-tl-lg rounded-br-lg" alt="">
+		
+		<div class="py-6 sm:py-8 lg:py-12">
+			<div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+			  <p class="mb-2 font-semibold text-sky-600 md:mb-3 lg:text-xl">Web Developer</p>
+		  
+			  <h2 class="mb-4 text-2xl font-bold text-neutral-800 md:mb-6 lg:text-6xl">Jovan Lopez</h2>
+		  
+			  <p class="max-w-screen-md text-gray-500 md:text-xl">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p>
+			</div>
+		</div>
 	</main>
 </Layout>
