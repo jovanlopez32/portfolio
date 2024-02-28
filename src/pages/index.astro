@@ -12,6 +12,9 @@ import ReactIcon from '../assets/icons/Frontend/ReactJS.astro'
 import VueIcon from '../assets/icons/Frontend/VueJS.astro'
 import AstroIcon from '../assets/icons/Frontend/AstroJS.astro'
 import AlpineIcon from '../assets/icons/Frontend/AlpineJS.astro'
+import IonicIcon from '../assets/icons/Frontend/Ionic.astro'
+import LivewireIcon from '../assets/icons/Frontend/Livewire.astro'
+import Markdown from '../assets/icons/Frontend/Markdown.astro'
 /* Backend */
 import PHPIcon from '../assets/icons/Backend/PHP.astro'
 import LaravelIcon from '../assets/icons/Backend/Laravel.astro'
@@ -130,7 +133,7 @@ import Technologies from '../components/Technologies.astro'
 			
 			<div class="grid  grid-cols-1 md:grid-cols-2 gap-5 max-w-screen-lg --> ">
 		
-				<Technologies title="Frontend" >
+				<Technologies title="Frontend" color-square="bg-sky-600" >
 					<div class="flex flex-col items-center gap-3">
 						<HTML5Icon class="size-12" />
 						<p class="font-bold">HTML5</p>
@@ -163,6 +166,19 @@ import Technologies from '../components/Technologies.astro'
 						<AlpineIcon class="size-12" />
 						<p class="font-bold">AlpineJS</p>
 					</div>
+					<div class="flex flex-col items-center gap-3">
+						<IonicIcon class="size-12" />
+						<p class="font-bold">IonicJS</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<LivewireIcon class="size-12" />
+						<p class="font-bold">Livewire</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<Markdown class="size-12" />
+						<p class="font-bold">Markdown</p>
+					</div>
+
 				</Technologies>
 
 				<Technologies title="Backend" >
@@ -204,6 +220,32 @@ import Technologies from '../components/Technologies.astro'
 					</div>
 				</Technologies>
 
+				<Technologies title="Learning" >
+					<div class="flex flex-col items-center gap-3">
+						<DockerIcon class="size-12" />
+						<p class="font-bold">Docker</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<TypeScriptIcon class="size-12" />
+						<p class="font-bold">TypeScript</p>
+					</div>
+
+					<div class="flex flex-col items-center gap-3">
+						<RustIcon class="size-12" />
+						<p class="font-bold">Rust</p>
+					</div>
+
+					<div class="flex flex-col items-center gap-3">
+						<TauriIcon class="size-12" />
+						<p class="font-bold">Tauri</p>
+					</div>
+
+					<div class="flex flex-col items-center gap-3">
+						<TensorFlowIcon class="size-12" />
+						<p class="font-bold">TensorFlow</p>
+					</div>
+				</Technologies>
+
 				<Technologies title="Tools" >
 					<div class="flex flex-col items-center gap-3">
 						<GitIcon class="size-12" />
@@ -239,31 +281,7 @@ import Technologies from '../components/Technologies.astro'
 					</div>	
 				</Technologies>
 
-				<Technologies title="Learning" >
-					<div class="flex flex-col items-center gap-3">
-						<DockerIcon class="size-12" />
-						<p class="font-bold">Docker</p>
-					</div>
-					<div class="flex flex-col items-center gap-3">
-						<TypeScriptIcon class="size-12" />
-						<p class="font-bold">TypeScript</p>
-					</div>
-
-					<div class="flex flex-col items-center gap-3">
-						<RustIcon class="size-12" />
-						<p class="font-bold">Rust</p>
-					</div>
-
-					<div class="flex flex-col items-center gap-3">
-						<TauriIcon class="size-12" />
-						<p class="font-bold">Tauri</p>
-					</div>
-
-					<div class="flex flex-col items-center gap-3">
-						<TensorFlowIcon class="size-12" />
-						<p class="font-bold">TensorFlow</p>
-					</div>
-				</Technologies>
+				
 
 				<Technologies title="Artificial Intelligence" tworows="yes">
 					
