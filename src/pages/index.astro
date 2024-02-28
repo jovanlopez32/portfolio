@@ -3,44 +3,318 @@
 import GitHubIcon from '../assets/icons/GitHub.astro'
 import MailIcon from '../assets/icons/Mail.astro'
 import LinkedInIcon from '../assets/icons/LinkedIn.astro'
+/* Frontend */
+import HTML5Icon from '../assets/icons/Frontend/HTML5.astro'
+import CSS3Icon from '../assets/icons/Frontend/CSS3.astro'
+import JavaScriptIcon from '../assets/icons/Frontend/JavaScript.astro'
+import TailwindIcon from '../assets/icons/Frontend/Tailwind.astro'
+import ReactIcon from '../assets/icons/Frontend/ReactJS.astro'
+import VueIcon from '../assets/icons/Frontend/VueJS.astro'
+import AstroIcon from '../assets/icons/Frontend/AstroJS.astro'
+import AlpineIcon from '../assets/icons/Frontend/AlpineJS.astro'
+/* Backend */
+import PHPIcon from '../assets/icons/Backend/PHP.astro'
+import LaravelIcon from '../assets/icons/Backend/Laravel.astro'
+import MySQLIcon from '../assets/icons/Backend/MySQL.astro'
+import StrapiIcon from '../assets/icons/Backend/StrapiJS.astro'
+import NodeJSIcon from '../assets/icons/Backend/NodeJS.astro'
+import ExpressJSIcon from '../assets/icons/Backend/ExpressJS.astro'
+import NextJSIcon from '../assets/icons/Backend/NextJS.astro'
+import CPlusPlusIcon from '../assets/icons/Backend/CPlusPlus.astro'
+import PythonIcon from '../assets/icons/Backend/Python.astro'
+/* Learning */
+import DockerIcon from '../assets/icons/Learning/Docker.astro'
+import RustIcon from '../assets/icons/Learning/Rust.astro'
+import TauriIcon from '../assets/icons/Learning/Tauri.astro'
+import TypeScriptIcon from '../assets/icons/Learning/TypeScript.astro'
+import TensorFlowIcon from '../assets/icons/Learning/TensorFlow.astro'
+/* Tools */
+import VSCodeIcon from '../assets/icons/Tools/VSCode.astro'
+import GitIcon from '../assets/icons/Tools/Git.astro'
+import NPMIcon from '../assets/icons/Tools/NPM.astro'
+import LinuxIcon from '../assets/icons/Tools/Linux.astro'
+import BashIcon from '../assets/icons/Tools/Bash.astro'
+import NotionIcon from '../assets/icons/Tools/Notion.astro'
+import PostManIcon from '../assets/icons/Tools/PostMan.astro'
+import LunacyIcon from '../assets/icons/Tools/Lunacy.astro'
+/* Artificial Intelligence */
+import HuggingFaceIcon from '../assets/icons/AI/HuggingFace.astro'
+import PyTorchIcon from '../assets/icons/AI/PyTorch.astro'
+import OpenAIIcon from '../assets/icons/AI/OpenAI.astro'
+import NvidiaIcon from '../assets/icons/AI/Nvidia.astro'
+import MistralAIIcon from '../assets/icons/AI/MistralAI.astro'
+import OllamaIcon from '../assets/icons/AI/Ollama.astro'
 /* Components */
 import Layout from '../layouts/Layout.astro'
 import ContactItems from '../components/ContactItems.astro'
+import Timeline from '../components/Timeline.astro'
+import TimelineItem from '../components/TimelineItem.astro'
+import Technologies from '../components/Technologies.astro'
+
+
 
 ---
-
+<!-- flex flex-wrap gap-2 items-end justify-start lx:justify-center mx-auto px-10 xl:px-0 -->
 <Layout pageTitle='Home' pageContent='Portfolio Jovan Lopez'>
-	<main class="flex items-center justify-start lx:justify-center gap-x-5 gap-y-10 mx-auto px-10 xl:px-0 min-h-screen" >
-		<img src="./images/profile.jpg" class="h-72 rounded-tr-3xl rounded-bl-3xl rounded-tl-lg rounded-br-lg border-4 border-neutral-800" alt="">
+	
+	<main class="flex flex-col items-start justify-center lg:flex-row lg:items-center gap-10  w-full mb-20 mt-32" >
 		
-		<div class="py-6 sm:py-8 lg:py-12">
-			<div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-				<p class="mb-2 text-xl font-semibold text-sky-600 md:mb-3 lg:text-xl">Web Developer</p>
-			
-				<h2 class="mb-4 text-4xl font-bold text-neutral-800 md:mb-6 lg:text-6xl">Jovan Lopez</h2>
-			
-				<p class="max-w-screen-md text-lg text-neutral-900 md:text-xl text-pretty">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p>
-			
-				<div class="mt-7 flex items-center gap-x-5">
-					<ContactItems href="https://github.com/jovanlopez32" text="GitHub">
-						<GitHubIcon slot='svg' class="size-6" />
-					</ContactItems>
+		<img src="./images/profile.jpg" class="h-48 lg:h-60  border-4 border-neutral-800" alt="Jovan Lopez Image Profile">
+		
+		<div class="w-fit">
+			<h2 class="mb-2 md:mb-2 text-2xl font-semibold text-sky-600 ">Web Developer</h2>
+			<h1 class="mb-4 md:mb-4 text-4xl sm:text-5xl font-bold text-neutral-800  ">Jovan Lopez</h1>
+			<p class="max-w-screen-md text-lg sm:text-xl  text-neutral-900 text-pretty font-semibold">+3 años de experiencia en el desarrollo de software, impulsando a las empresas en la creación de aplicaciones que satisfagan sus necesidades.</p>
+		
+			<div class="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
+				<ContactItems href="https://github.com/jovanlopez32" text="GitHub">
+					<GitHubIcon slot='svg' class="size-6" />
+				</ContactItems>
 
-					<ContactItems href="https://github.com/jovanlopez32" text="LinkedIn">
-						<LinkedInIcon slot='svg' class="size-6" />
-					</ContactItems>
+				<ContactItems href="https://www.linkedin.com/in/jovanlopez32/" text="LinkedIn">
+					<LinkedInIcon slot='svg' class="size-6" />
+				</ContactItems>
 
-					<ContactItems href="https://github.com/jovanlopez32" text="everest.studio32@gmail.com">
-						<MailIcon slot='svg' class="size-6" />
-					</ContactItems>
-				</div>
+				<ContactItems href="mailto:everest.studio32@gmail.com" text="everest.studio32@gmail.com">
+					<MailIcon slot='svg' class="size-6" />
+				</ContactItems>
 			</div>
-
-			
 		</div>
+		
+
 	</main>
 
-	<section class="w-full max-w-7xl mx-auto min-h-screen bg-red-200">
+	<section class="flex items-center justify-center mb-20 ">
+		<Timeline title='Experience' subtitle='The first is the first' >
+			<TimelineItem company='Neuuni Universidad' dateStart='May 2022' dateEnd='Actually'>
+				<div slot="description">
+					<p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+				</div>
+			</TimelineItem>
 
+			<TimelineItem company='Gora S.A. de C.V.' dateStart='July 2020' dateEnd='May 2022'>
+				<div slot="description">
+					<p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+				</div>
+			</TimelineItem>
+
+			<TimelineItem company='Centro de Salud Universitario (UASLP)' dateStart='May 2022' dateEnd='Actually'>
+				<div slot="description">
+					<p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+					<p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+				</div>
+			</TimelineItem>
+
+			<TimelineItem company='Hackaton SLP' dateStart='March 2019' dateEnd='May 2019'>
+				<div slot="description">
+					<p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+				</div>
+			</TimelineItem>
+
+			<TimelineItem company='Lavaportex' dateStart='March 2019' dateEnd='May 2019'>
+				<div slot="description">
+					<p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+				</div>
+			</TimelineItem>
+		</Timeline>
 	</section>
+	
+	<!-- Technologies -->
+	<section class=" flex flex-col items-center justify-center mb-20 ">
+		<div class="w-full max-w-screen-lg ">
+
+			<div class=" text-left mb-5 before:block before:w-24 before:h-3 before:mb-5  before:mx-0 before:bg-sky-600"></div>
+				<h3 class="text-4xl font-semibold">Technologies</h3>
+				<p class="text-pretty text-lg mt-3 mb-10">In my journey through the web development universe, I have cultivated experience and skills in a wide range of cutting-edge technologies. My technology stack includes:</p>
+			</div>
+			
+			<div class="grid  grid-cols-1 md:grid-cols-2 gap-5 max-w-screen-lg --> ">
+		
+				<Technologies title="Frontend" >
+					<div class="flex flex-col items-center gap-3">
+						<HTML5Icon class="size-12" />
+						<p class="font-bold">HTML5</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<CSS3Icon class="size-12" />
+						<p class="font-bold">CSS3</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<JavaScriptIcon class="size-12" />
+						<p class="font-bold">JavaScript</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<TailwindIcon class="size-12" />
+						<p class="font-bold">TailwindCSS</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<ReactIcon class="size-12" />
+						<p class="font-bold">ReactJS</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<VueIcon class="size-12" />
+						<p class="font-bold">VueJS</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<AstroIcon class="size-12" />
+						<p class="font-bold">AstroJS</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<AlpineIcon class="size-12" />
+						<p class="font-bold">AlpineJS</p>
+					</div>
+				</Technologies>
+
+				<Technologies title="Backend" >
+					<div class="flex flex-col items-center gap-3">
+						<LaravelIcon class="size-12" />
+						<p class="font-bold">Laravel</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<PHPIcon class="size-12" />
+						<p class="font-bold">PHP</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<MySQLIcon class="size-12" />
+						<p class="font-bold">MySQL</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<NodeJSIcon class="size-12" />
+						<p class="font-bold">NodeJS</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<ExpressJSIcon class="size-12" />
+						<p class="font-bold">ExpressJS</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<NextJSIcon class="size-12" />
+						<p class="font-bold">NextJS</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<StrapiIcon class="size-12" />
+						<p class="font-bold">StrapiJS</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<PythonIcon class="size-12" />
+						<p class="font-bold">Python</p>
+					</div>
+					<div class="flex flex-col items-center grow  gap-3">
+						<CPlusPlusIcon class="size-12" />
+						<p class="font-bold">C & C++</p>
+					</div>
+				</Technologies>
+
+				<Technologies title="Tools" >
+					<div class="flex flex-col items-center gap-3">
+						<GitIcon class="size-12" />
+						<p class="font-bold">Git</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<BashIcon class="size-12" />
+						<p class="font-bold">Bash</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<PostManIcon class="size-12" />
+						<p class="font-bold">Postman</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<NotionIcon class="size-12" />
+						<p class="font-bold">Notion</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<LunacyIcon class="size-12" />
+						<p class="font-bold">Lunacy</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<NPMIcon class="size-12" />
+						<p class="font-bold">npm</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<VSCodeIcon class="size-10" />
+						<p class="font-bold">VSCode</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<LinuxIcon class="size-10" />
+						<p class="font-bold">Linux</p>
+					</div>	
+				</Technologies>
+
+				<Technologies title="Learning" >
+					<div class="flex flex-col items-center gap-3">
+						<DockerIcon class="size-12" />
+						<p class="font-bold">Docker</p>
+					</div>
+					<div class="flex flex-col items-center gap-3">
+						<TypeScriptIcon class="size-12" />
+						<p class="font-bold">TypeScript</p>
+					</div>
+
+					<div class="flex flex-col items-center gap-3">
+						<RustIcon class="size-12" />
+						<p class="font-bold">Rust</p>
+					</div>
+
+					<div class="flex flex-col items-center gap-3">
+						<TauriIcon class="size-12" />
+						<p class="font-bold">Tauri</p>
+					</div>
+
+					<div class="flex flex-col items-center gap-3">
+						<TensorFlowIcon class="size-12" />
+						<p class="font-bold">TensorFlow</p>
+					</div>
+				</Technologies>
+
+				<Technologies title="Artificial Intelligence" tworows="yes">
+					
+					<div class="w-fit grow grid grid-cols-2 sm:grid-cols-4 place-items-center gap-y-5">
+						<div class="flex flex-col items-center w-fit gap-3">
+							<HuggingFaceIcon class="size-10" />
+							<p class="font-bold text-xs">HuggingFace</p>
+						</div>
+						<div class="flex flex-col items-center w-fit gap-3">
+							<PyTorchIcon class="size-10" />
+							<p class="font-bold text-xs">PyTorch</p>
+						</div>
+
+						<div class="flex flex-col items-center w-fit gap-3">
+							<NvidiaIcon class="size-10" />
+							<p class="font-bold text-xs">Nvidia</p>
+						</div>
+						<div class="flex flex-col items-center w-fit gap-3">
+							<OpenAIIcon class="size-10" />
+							<p class="font-bold text-xs">OpenAI (API)</p>
+						</div>
+						<div class="flex flex-col items-center w-fit gap-3">
+							<MistralAIIcon class="size-10" />
+							<p class="font-bold text-xs">Mistral AI (API)</p>
+						</div>
+
+						<div class="flex flex-col items-center w-fit gap-3">
+							<PythonIcon class="size-10" />
+							<p class="font-bold text-xs">Python</p>
+						</div>
+
+						<div class="flex flex-col items-center w-fit gap-3">
+							<CPlusPlusIcon class="size-10" />
+							<p class="font-bold text-xs">C & C++</p>
+						</div>
+
+						<div class="flex flex-col items-center w-fit gap-3">
+							<OllamaIcon class="size-10" />
+							<p class="font-bold text-xs">Ollama</p>
+						</div>
+					</div>
+
+					<div class="max-w-md self-start">
+							<p>Aunque mis trabajos se centren en la creacion de aplicaciones, eh tenido la oportunidad de trabajar en proyectos importantes de inteligencia artificial, desde el uso de apis externas, hasta la aplicacion, fine-tunning de modelos de machine learning.</p>
+					</div>
+					
+				</Technologies>
+	
+			</div>
+		</div>
+	</section>
+
+
 </Layout>

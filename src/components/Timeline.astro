@@ -1,0 +1,26 @@
+---
+interface Props {
+    title: string
+    subtitle: string
+}
+
+const {title, subtitle} = Astro.props
+---
+
+
+<div class="w-fit ">
+
+    <div>
+        <div class=" text-left mb-5 before:block before:w-24 before:h-3 before:mb-5  before:mx-0 before:bg-sky-600">
+            <h3 class="text-4xl font-semibold">{title}</h3>
+            <span class="text-sm font-bold tracki uppercase text-gray-400">{subtitle}</span>
+        </div>
+    </div>
+
+    <div class="mt-8 ml-5">
+        <div class="col-span-12 space-y-12 relative px-5 sm:col-span-8 sm:space-y-8 before:absolute before:top-2 before:bottom-0 before:w-0.5 before:-left-2 before:bg-gray-700">
+            <slot />
+        </div>
+    </div>
+
+</div>
