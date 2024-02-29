@@ -1,10 +1,13 @@
 ---
-const {title, tworows} = Astro.props
+const {title, tworows, colorSquare} = Astro.props
 ---
  
 <div class={tworows == undefined ? "w-full border-4 border-neutral-900 py-6 px-6 col-span-2 md:col-span-1" : "w-full border-4  border-neutral-900 py-6 px-6 col-span-2"} >
-    <h1 class="text-3xl font-semibold">{title}</h1>
-    <div class={tworows == undefined ? "grid grid-cols-2 sm:grid-cols-4 gap-x-12 mt-8 gap-y-8 items-baseline justify-around" : "flex flex-wrap gap-x-12 mt-8 gap-y-8 items-baseline justify-around"} >
+    <div class="flex items-center gap-5">
+        <div class=`${colorSquare} w-5 h-5`></div>
+        <h1 class="text-3xl font-semibold">{title}</h1>
+    </div>
+    <div class={tworows == undefined ? "grid grid-cols-2 lg:grid-cols-4 gap-x-12 mt-8 gap-y-8 items-baseline justify-around" : "flex flex-wrap gap-x-12 mt-8 gap-y-8 items-baseline justify-around"} >
         <slot />
     </div>
 </div>

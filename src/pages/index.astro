@@ -53,7 +53,9 @@ import ContactItems from '../components/ContactItems.astro'
 import Timeline from '../components/Timeline.astro'
 import TimelineItem from '../components/TimelineItem.astro'
 import Technologies from '../components/Technologies.astro'
-
+import Project from '../components/Project.astro'
+import TechItem from '../components/TechItem.astro'
+import NodeJS from '../assets/icons/Backend/NodeJS.astro'
 
 
 ---
@@ -133,7 +135,7 @@ import Technologies from '../components/Technologies.astro'
 			
 			<div class="grid  grid-cols-1 md:grid-cols-2 gap-5 max-w-screen-lg --> ">
 		
-				<Technologies title="Frontend" color-square="bg-sky-600" >
+				<Technologies title="Frontend" colorSquare="bg-sky-600" >
 					<div class="flex flex-col items-center gap-3">
 						<HTML5Icon class="size-12" />
 						<p class="font-bold">HTML5</p>
@@ -181,7 +183,7 @@ import Technologies from '../components/Technologies.astro'
 
 				</Technologies>
 
-				<Technologies title="Backend" >
+				<Technologies title="Backend" colorSquare="bg-red-600">
 					<div class="flex flex-col items-center gap-3">
 						<LaravelIcon class="size-12" />
 						<p class="font-bold">Laravel</p>
@@ -220,7 +222,7 @@ import Technologies from '../components/Technologies.astro'
 					</div>
 				</Technologies>
 
-				<Technologies title="Learning" >
+				<Technologies title="Learning" colorSquare="bg-rose-400">
 					<div class="flex flex-col items-center gap-3">
 						<DockerIcon class="size-12" />
 						<p class="font-bold">Docker</p>
@@ -246,7 +248,7 @@ import Technologies from '../components/Technologies.astro'
 					</div>
 				</Technologies>
 
-				<Technologies title="Tools" >
+				<Technologies title="Tools" colorSquare="bg-orange-500">
 					<div class="flex flex-col items-center gap-3">
 						<GitIcon class="size-12" />
 						<p class="font-bold">Git</p>
@@ -281,9 +283,7 @@ import Technologies from '../components/Technologies.astro'
 					</div>	
 				</Technologies>
 
-				
-
-				<Technologies title="Artificial Intelligence" tworows="yes">
+				<Technologies title="Artificial Intelligence" tworows="yes" colorSquare="bg-green-600">
 					
 					<div class="w-fit grow grid grid-cols-2 sm:grid-cols-4 place-items-center gap-y-5">
 						<div class="flex flex-col items-center w-fit gap-3">
@@ -324,14 +324,154 @@ import Technologies from '../components/Technologies.astro'
 						</div>
 					</div>
 
-					<div class="max-w-md self-start">
-							<p>Aunque mis trabajos se centren en la creacion de aplicaciones, eh tenido la oportunidad de trabajar en proyectos importantes de inteligencia artificial, desde el uso de apis externas, hasta la aplicacion, fine-tunning de modelos de machine learning.</p>
+					<div class="max-w-md self-start text-pretty">
+							<p>Aunque mis trabajos se centren en la creacion de aplicaciones, eh tenido la oportunidad de trabajar en proyectos importantes de inteligencia artificial, desde el uso de apis externas, la integracion en aplicaciones, hasta hacer fine-tunning en modelos de machine learning.</p>
 					</div>
 					
 				</Technologies>
 	
 			</div>
 		</div>
+	</section>
+
+	<section class=" flex flex-col items-center justify-center mb-20 ">
+		<div class="w-full max-w-screen-lg ">
+			<div class=" text-left mb-5 before:block before:w-24 before:h-3 before:mb-5  before:mx-0 before:bg-sky-600"></div>
+				<h3 class="text-4xl font-semibold">Projects</h3>
+				<p class="text-pretty text-lg mt-3 mb-10">Esto es una recopilacion de los proyectos que he realizado a lo largo de mi carrera.</p>
+			</div>
+		</div>
+
+		
+		<div class="grid lg:grid-cols-9 grid-rows-9 gap-4 w-full max-w-screen-lg">
+			<Project class="col-span-3 row-span-3" title="Whatssend" srcImage="./wss.png" > 
+				<p slot="description" class="text-sm font-semibold text-pretty">Este proyecto está centrado en facilitar el envío masivo de mensajes a través de WhatsApp, abordando las problemáticas relacionadas con el bloqueo de cuentas y la demora en la entrega. Además, busca resolver una de las principales necesidades de las agencias de marketing al proporcionar una solución eficiente y confiable para la comunicación masiva con los clientes.</p>
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-5">
+					<TechItem tech="NodeJS" >
+						<NodeJSIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem tech="NodeJS" >
+						<ExpressJSIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem tech="CSS3" >
+						<CSS3Icon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem tech="JavaScript" >
+						<JavaScriptIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+
+			<Project class="col-span-3 row-span-3 col-start-4" title="Vocational Test AI" srcImage="./tvnevil.png"> 
+				<p slot="description" class="text-sm font-semibold text-pretty">Test vocacional impulsado por inteligencia artificial ofrece una experiencia personalizada, profesional y precisa para los usuarios. Con esta herramienta, la comunidad puede obtener información valiosa sobre sus opciones educativas y profesionales, facilitando así la toma de decisiones informadas sobre su futuro académico y laboral.</p>
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-5">
+					<TechItem d >
+						<LaravelIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<TensorFlowIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem  >
+						<OpenAIIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem  >
+						<VueIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem  >
+						<TailwindIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+
+			<Project class="col-span-3 row-span-3 col-start-7" title="Mika's Food" srcImage="./mikasfood.png">
+				<p slot="description" class="text-sm font-semibold text-pretty">e-commerce de comida para mascotas está diseñado con un enfoque prioritario en la experiencia del usuario, así como en su interfaz, garantizando que sea intuitiva y fácil de usar. Nuestro objetivo es que los usuarios puedan encontrar los productos de la más alta calidad de manera rápida y sencilla, brindando así una experiencia de compra óptima para ellos y sus mascotas.</p> 
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
+					<TechItem >
+						<NextJSIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<ReactIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<TailwindIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+
+			<Project class="col-span-6 row-span-3 row-start-4" title="Nevil AI" srcImage="./nevilai.png"> 
+				<p slot="description" class="text-sm font-semibold text-pretty">ChatBot, potenciado por Inteligencia Artificial y respaldado por uno de los modelos de lenguaje más avanzados (LLM), en conjunto con otros modelos de Machine Learning, ha sido entrenado con datos específicos de la Universidad Neuuni. Su principal objetivo es brindar apoyo a la comunidad estudiantil, profesores y personal administrativo en sus actividades diarias, tanto educativas como administrativas. Este proyecto se integra con WhatsApp para garantizar una mayor accesibilidad y facilitar su uso.</p>
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
+					<TechItem >
+						<HuggingFaceIcon slot='svg' class="size-8" />
+					</TechItem>
+					<TechItem >
+						<PythonIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<CPlusPlusIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<NvidiaIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<OllamaIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+
+			<Project class="col-span-3 row-span-3 col-start-7 row-start-4" title="Orbit Business" srcImage="./orbit.png">
+				<p slot="description" class="text-sm font-semibold text-pretty">Mini E.R.P. diseñado especialmente para la administración integral de negocios, centrándose en la gestión de proyectos y el control eficiente del almacenamiento de productos, entre otros procedimientos fundamentales.</p> 
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
+					<TechItem >
+						<LaravelIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<LivewireIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<TailwindIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<MySQLIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+
+			<Project class="col-span-3 row-span-3 row-start-7" title="Neuuni Business" srcImage="./nbusiness.png"> 
+				<p slot="description" class="text-sm font-semibold text-pretty">Landing page diseñada para la captación de leads, centrándose en la creación de convenios con empresas y negocios. Priorizamos la experiencia del usuario, garantizando que la navegación sea sencilla y que la información relevante sea fácilmente accesible.</p>
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
+					<TechItem >
+						<LaravelIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<TailwindIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<AlpineIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+
+			<Project class="col-span-6 row-span-3 col-start-4 row-start-7" title="Everest CRM" srcImage="./everest.png"> 
+				<p slot="description" class="text-sm font-semibold">Este CRM está diseñado para la captación y gestión efectiva de leads provenientes de diversas plataformas como Facebook, Instagram, entre otras. Su principal enfoque radica en optimizar el seguimiento de los procesos de cierre de ventas, generando informes detallados sobre estos procesos. Además, facilita la recuperación de datos relevantes para la implementación de estrategias de marketing más efectivas.</p>
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
+					<TechItem >
+						<LaravelIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<TailwindIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<VueIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<MySQLIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+		</div>
+		
+	
 	</section>
 
 

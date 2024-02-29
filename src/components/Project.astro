@@ -1,0 +1,14 @@
+---
+const {title = 'Title Project', srcImage} = Astro.props
+---
+
+<div class=`${Astro.props.class} p-5 border-4 border-neutral-900`>
+    <div class="w-full h-60 bg-black mb-4">
+        <img src={srcImage} class="w-full h-full object-cover" alt="">
+    </div>
+    <div class="flex items-center gap-4 mb-3">
+        <h2 class="text-xl font-bold">{title}</h2>
+    </div>
+    <slot name="description"  />
+    <slot name="tech" />
+</div>
