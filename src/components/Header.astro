@@ -3,20 +3,20 @@ import EverestLogo from '../assets/icons/EverestLogo.astro'
 import HeaderItems from './HeaderItems.astro'
 ---
 
-<header class="fixed top-0 w-full z-40 left-0 px-10">
+<header class="fixed top-0 w-full z-40 left-0 px-10 isolate  backdrop-blur-md bg-dark-200/30 dark:bg-dark-900/30">
 
     <div 
     class="w-full max-w-7xl 
     flex items-center justify-between
     mx-auto 
     py-4 px-8 
-    isolate  backdrop-blur-md bg-dark-200/30 dark:bg-dark-900/30  z-20 top-0 left-0  ">
+      z-20 top-0 left-0  ">
         <EverestLogo class="size-10 hidden sm:block" />
 
         <nav class="flex items-center justify-between sm:justify-end sm:gap-x-8 w-full">
             <HeaderItems href="/" text="Home" />
-            <HeaderItems href="/" text="Experience" />
-            <HeaderItems href="/" text="Projects" />
+            <HeaderItems href="#experience" text="Experience" />
+            <HeaderItems href="#projects" text="Projects" />
         </nav>
     </div>
     

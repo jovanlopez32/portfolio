@@ -55,21 +55,18 @@ import TimelineItem from '../components/TimelineItem.astro'
 import Technologies from '../components/Technologies.astro'
 import Project from '../components/Project.astro'
 import TechItem from '../components/TechItem.astro'
-import NodeJS from '../assets/icons/Backend/NodeJS.astro'
-
-
 ---
 <!-- flex flex-wrap gap-2 items-end justify-start lx:justify-center mx-auto px-10 xl:px-0 -->
 <Layout pageTitle='Home' pageContent='Portfolio Jovan Lopez'>
 	
-	<main class="flex flex-col items-start justify-center lg:flex-row lg:items-center gap-10  w-full mb-20 mt-32" >
+	<main class="flex flex-col items-start justify-center lg:flex-row lg:items-center gap-10  w-full mb-20 mt-40" >
 		
 		<img src="./images/profile.jpg" class="h-48 lg:h-60  border-4 border-neutral-800" alt="Jovan Lopez Image Profile">
 		
 		<div class="w-fit">
-			<h2 class="mb-2 md:mb-2 text-2xl font-semibold text-sky-600 ">Web Developer</h2>
+			<h2 class="mb-2 md:mb-2 text-2xl font-semibold text-sky-600 ">Software Developer</h2>
 			<h1 class="mb-4 md:mb-4 text-4xl sm:text-5xl font-bold text-neutral-800  ">Jovan Lopez</h1>
-			<p class="max-w-screen-md text-lg sm:text-xl  text-neutral-900 text-pretty font-semibold">+3 años de experiencia en el desarrollo de software, impulsando a las empresas en la creación de aplicaciones que satisfagan sus necesidades.</p>
+			<p class="max-w-screen-md text-lg sm:text-xl  text-neutral-900 text-pretty font-semibold">+4 years of experience, I have led software development projects with a focus on creating applications that enhance innovation and optimize business processes. My trajectory has been centered on delivering effective and reliable solutions that address the specific needs of each client.</p>
 		
 			<div class="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
 				<ContactItems href="https://github.com/jovanlopez32" text="GitHub">
@@ -89,36 +86,61 @@ import NodeJS from '../assets/icons/Backend/NodeJS.astro'
 
 	</main>
 
-	<section class="flex items-center justify-center mb-20 ">
+	<section id="experience" class="flex items-center justify-center mb-20 pt-20">
 		<Timeline title='Experience' subtitle='The first is the first' >
 			<TimelineItem company='Neuuni Universidad' dateStart='May 2022' dateEnd='Actually'>
 				<div slot="description">
-					<p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+					<ul class="list-disc ml-4">
+						<li class="mt-3">In charge of the development and maintenance of a real-time CRM for prospect tracking, integrating social media APIs to enhance usability. Implemented a reporting system to measure user and prospect progress, facilitating strategic decision-making for the marketing department.</li>
+						<li class="mt-3">Implementing and developing tools for each department to streamline and automate their daily activities. </li>
+						<li class="mt-3">Supporting administrative, academic, and student personnel in collecting data to help identify areas for improvement. </li>
+						<li class="mt-3">Analyzing and proposing projects to enhance and innovate the institution.</li>
+					</ul>
+					<h2 class="my-4 font-semibold">Artificial Intelligence:</h2>
+					<ul class="list-disc ml-4">
+						<li class="mt-3">Developing AI-driven tools for process improvement.</li>
+						<li class="mt-3">In charge of developing a chatbot for customer service, student assistance, and academic support.</li>
+						<li class="mt-3">Training Language Models (LM) using data from the institution.</li>
+					</ul>
 				</div>
 			</TimelineItem>
 
 			<TimelineItem company='Gora S.A. de C.V.' dateStart='July 2020' dateEnd='May 2022'>
 				<div slot="description">
-					<p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+					<ul class="list-disc ml-4">
+						<li class="mt-3">Development of certain modules of the company's platform for resource management.</li>
+						<li class="mt-3">Database maintenance, as well as system error correction.</li>
+						<li class="mt-3">In charge of deploying the application to another cloud server.</li>
+					</ul>
 				</div>
 			</TimelineItem>
 
 			<TimelineItem company='Centro de Salud Universitario (UASLP)' dateStart='May 2022' dateEnd='Actually'>
 				<div slot="description">
-					<p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-					<p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+					<ul class="list-disc ml-4">
+						<li class="mt-3">Improving and adapting an existing system for patient management and medical records.</li>
+						<li class="mt-3">Adapting the database structure to enhance scalability</li>
+						<li class="mt-3">Documenting the development of the application.</li>
+					</ul>
 				</div>
 			</TimelineItem>
 
-			<TimelineItem company='Hackaton SLP' dateStart='March 2019' dateEnd='May 2019'>
+			<TimelineItem company='Hackaton SLP' dateStart='March 2019' dateEnd='March 2019'>
 				<div slot="description">
-					<p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+					<ul class="list-disc ml-4">
+						<li class="mt-3">Designing the interface of a mobile application that allows users to visualize a map with the safest routes in the city.</li>
+						<li class="mt-3">Development of the user tracking module on the map.</li>
+						<li class="mt-3">Development of the emergency module.</li>
+					</ul>
 				</div>
 			</TimelineItem>
 
-			<TimelineItem company='Lavaportex' dateStart='March 2019' dateEnd='May 2019'>
+			<TimelineItem company='Lavaportex' dateStart='February 2018' dateEnd='May 2019'>
 				<div slot="description">
-					<p class="mt-3">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+					<ul class="list-disc ml-4">
+						<li class="mt-3">Company equipment maintenance.</li>
+						<li class="mt-3">Support in data management and process documentation.</li>
+					</ul>
 				</div>
 			</TimelineItem>
 		</Timeline>
@@ -325,7 +347,7 @@ import NodeJS from '../assets/icons/Backend/NodeJS.astro'
 					</div>
 
 					<div class="max-w-md self-start text-pretty">
-							<p>Aunque mis trabajos se centren en la creacion de aplicaciones, eh tenido la oportunidad de trabajar en proyectos importantes de inteligencia artificial, desde el uso de apis externas, la integracion en aplicaciones, hasta hacer fine-tunning en modelos de machine learning.</p>
+							<p>Although my work primarily focuses on creating applications, I have had the opportunity to work on significant artificial intelligence projects, ranging from utilizing external APIs, integrating them into applications, to fine-tuning machine learning models.</p>
 					</div>
 					
 				</Technologies>
@@ -334,18 +356,18 @@ import NodeJS from '../assets/icons/Backend/NodeJS.astro'
 		</div>
 	</section>
 
-	<section class=" flex flex-col items-center justify-center mb-20 ">
+	<section id="projects" class=" flex flex-col items-center justify-center mb-20 pt-20 ">
 		<div class="w-full max-w-screen-lg ">
 			<div class=" text-left mb-5 before:block before:w-24 before:h-3 before:mb-5  before:mx-0 before:bg-sky-600"></div>
 				<h3 class="text-4xl font-semibold">Projects</h3>
-				<p class="text-pretty text-lg mt-3 mb-10">Esto es una recopilacion de los proyectos que he realizado a lo largo de mi carrera.</p>
+				<p class="text-pretty text-lg mt-3 mb-10">This is a compilation of some of the projects I have completed throughout my career.</p>
 			</div>
 		</div>
 
 		
-		<div class="grid lg:grid-cols-9 grid-rows-9 gap-4 w-full max-w-screen-lg">
+		<div class="hidden lg:grid lg:grid-cols-9 grid-rows-9 gap-4 w-full max-w-screen-lg">
 			<Project class="col-span-3 row-span-3" title="Whatssend" srcImage="./wss.png" > 
-				<p slot="description" class="text-sm font-semibold text-pretty">Este proyecto está centrado en facilitar el envío masivo de mensajes a través de WhatsApp, abordando las problemáticas relacionadas con el bloqueo de cuentas y la demora en la entrega. Además, busca resolver una de las principales necesidades de las agencias de marketing al proporcionar una solución eficiente y confiable para la comunicación masiva con los clientes.</p>
+				<p slot="description" class="text-sm font-semibold text-pretty">This project focuses on facilitating the mass sending of messages via WhatsApp, addressing issues related to account blocking and delivery delays. Additionally, it aims to solve one of the main needs of marketing agencies by providing an efficient and reliable solution for mass communication with clients.</p>
 				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-5">
 					<TechItem tech="NodeJS" >
 						<NodeJSIcon slot='svg' class="size-6" />
@@ -363,7 +385,7 @@ import NodeJS from '../assets/icons/Backend/NodeJS.astro'
 			</Project>
 
 			<Project class="col-span-3 row-span-3 col-start-4" title="Vocational Test AI" srcImage="./tvnevil.png"> 
-				<p slot="description" class="text-sm font-semibold text-pretty">Test vocacional impulsado por inteligencia artificial ofrece una experiencia personalizada, profesional y precisa para los usuarios. Con esta herramienta, la comunidad puede obtener información valiosa sobre sus opciones educativas y profesionales, facilitando así la toma de decisiones informadas sobre su futuro académico y laboral.</p>
+				<p slot="description" class="text-sm font-semibold text-pretty">An AI-driven vocational test offers a personalized, professional, and precise experience for users. With this tool, the community can obtain valuable information about their educational and professional options, thereby facilitating informed decision-making about their academic and career future.</p>
 				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-5">
 					<TechItem d >
 						<LaravelIcon slot='svg' class="size-6" />
@@ -384,7 +406,7 @@ import NodeJS from '../assets/icons/Backend/NodeJS.astro'
 			</Project>
 
 			<Project class="col-span-3 row-span-3 col-start-7" title="Mika's Food" srcImage="./mikasfood.png">
-				<p slot="description" class="text-sm font-semibold text-pretty">e-commerce de comida para mascotas está diseñado con un enfoque prioritario en la experiencia del usuario, así como en su interfaz, garantizando que sea intuitiva y fácil de usar. Nuestro objetivo es que los usuarios puedan encontrar los productos de la más alta calidad de manera rápida y sencilla, brindando así una experiencia de compra óptima para ellos y sus mascotas.</p> 
+				<p slot="description" class="text-sm font-semibold text-pretty">This pet food e-commerce platform is designed with a primary focus on user experience and interface, ensuring it is intuitive and easy to use. Our goal is to allow users to quickly and easily find the highest quality products, providing an optimal shopping experience for them and their pets.</p> 
 				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
 					<TechItem >
 						<NextJSIcon slot='svg' class="size-6" />
@@ -399,7 +421,7 @@ import NodeJS from '../assets/icons/Backend/NodeJS.astro'
 			</Project>
 
 			<Project class="col-span-6 row-span-3 row-start-4" title="Nevil AI" srcImage="./nevilai.png"> 
-				<p slot="description" class="text-sm font-semibold text-pretty">ChatBot, potenciado por Inteligencia Artificial y respaldado por uno de los modelos de lenguaje más avanzados (LLM), en conjunto con otros modelos de Machine Learning, ha sido entrenado con datos específicos de la Universidad Neuuni. Su principal objetivo es brindar apoyo a la comunidad estudiantil, profesores y personal administrativo en sus actividades diarias, tanto educativas como administrativas. Este proyecto se integra con WhatsApp para garantizar una mayor accesibilidad y facilitar su uso.</p>
+				<p slot="description" class="text-sm font-semibold text-pretty">ChatBot, powered by Artificial Intelligence and backed by one of the most advanced Language Models (LLM), along with other Machine Learning models, has been trained with specific data from Neuuni University. Its main objective is to provide support to the student community, professors, and administrative staff in their daily activities, both educational and administrative. This project integrates with WhatsApp to ensure greater accessibility and ease of use.</p>
 				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
 					<TechItem >
 						<HuggingFaceIcon slot='svg' class="size-8" />
@@ -420,7 +442,7 @@ import NodeJS from '../assets/icons/Backend/NodeJS.astro'
 			</Project>
 
 			<Project class="col-span-3 row-span-3 col-start-7 row-start-4" title="Orbit Business" srcImage="./orbit.png">
-				<p slot="description" class="text-sm font-semibold text-pretty">Mini E.R.P. diseñado especialmente para la administración integral de negocios, centrándose en la gestión de proyectos y el control eficiente del almacenamiento de productos, entre otros procedimientos fundamentales.</p> 
+				<p slot="description" class="text-sm font-semibold text-pretty">Mini ERP designed specifically for comprehensive business management, focusing on project management and efficient control of product storage, among other fundamental procedures.</p> 
 				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
 					<TechItem >
 						<LaravelIcon slot='svg' class="size-6" />
@@ -438,7 +460,7 @@ import NodeJS from '../assets/icons/Backend/NodeJS.astro'
 			</Project>
 
 			<Project class="col-span-3 row-span-3 row-start-7" title="Neuuni Business" srcImage="./nbusiness.png"> 
-				<p slot="description" class="text-sm font-semibold text-pretty">Landing page diseñada para la captación de leads, centrándose en la creación de convenios con empresas y negocios. Priorizamos la experiencia del usuario, garantizando que la navegación sea sencilla y que la información relevante sea fácilmente accesible.</p>
+				<p slot="description" class="text-sm font-semibold text-pretty">Landing page designed for lead generation, focusing on creating agreements with companies and businesses. We prioritize user experience, ensuring that navigation is simple and relevant information is easily accessible.</p>
 				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
 					<TechItem >
 						<LaravelIcon slot='svg' class="size-6" />
@@ -453,7 +475,135 @@ import NodeJS from '../assets/icons/Backend/NodeJS.astro'
 			</Project>
 
 			<Project class="col-span-6 row-span-3 col-start-4 row-start-7" title="Everest CRM" srcImage="./everest.png"> 
-				<p slot="description" class="text-sm font-semibold">Este CRM está diseñado para la captación y gestión efectiva de leads provenientes de diversas plataformas como Facebook, Instagram, entre otras. Su principal enfoque radica en optimizar el seguimiento de los procesos de cierre de ventas, generando informes detallados sobre estos procesos. Además, facilita la recuperación de datos relevantes para la implementación de estrategias de marketing más efectivas.</p>
+				<p slot="description" class="text-sm font-semibold">This CRM is designed for the effective capture and management of leads from various platforms such as Facebook, Instagram, among others. Its main focus is on optimizing the tracking of sales closing processes, generating detailed reports on these processes. Additionally, it facilitates the retrieval of relevant data for the implementation of more effective marketing strategies.</p>
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
+					<TechItem >
+						<LaravelIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<TailwindIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<VueIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<MySQLIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+		</div>
+
+		<div class=" lg:hidden grid grid-cols-1 gap-4 w-full max-w-screen-lg">
+			<Project class="" title="Whatssend" srcImage="./wss.png" > 
+				<p slot="description" class="text-sm font-semibold text-pretty">This project focuses on facilitating the mass sending of messages via WhatsApp, addressing issues related to account blocking and delivery delays. Additionally, it aims to solve one of the main needs of marketing agencies by providing an efficient and reliable solution for mass communication with clients.</p>
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-5">
+					<TechItem tech="NodeJS" >
+						<NodeJSIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem tech="NodeJS" >
+						<ExpressJSIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem tech="CSS3" >
+						<CSS3Icon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem tech="JavaScript" >
+						<JavaScriptIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+
+			<Project class="" title="Vocational Test AI" srcImage="./tvnevil.png"> 
+				<p slot="description" class="text-sm font-semibold text-pretty">An AI-driven vocational test offers a personalized, professional, and precise experience for users. With this tool, the community can obtain valuable information about their educational and professional options, thereby facilitating informed decision-making about their academic and career future.</p>
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-5">
+					<TechItem d >
+						<LaravelIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<TensorFlowIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem  >
+						<OpenAIIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem  >
+						<VueIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem  >
+						<TailwindIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+
+			<Project class="" title="Mika's Food" srcImage="./mikasfood.png">
+				<p slot="description" class="text-sm font-semibold text-pretty">This pet food e-commerce platform is designed with a primary focus on user experience and interface, ensuring it is intuitive and easy to use. Our goal is to allow users to quickly and easily find the highest quality products, providing an optimal shopping experience for them and their pets.</p> 
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
+					<TechItem >
+						<NextJSIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<ReactIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<TailwindIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+
+			<Project class="" title="Nevil AI" srcImage="./nevilai.png"> 
+				<p slot="description" class="text-sm font-semibold text-pretty">ChatBot, powered by Artificial Intelligence and backed by one of the most advanced Language Models (LLM), along with other Machine Learning models, has been trained with specific data from Neuuni University. Its main objective is to provide support to the student community, professors, and administrative staff in their daily activities, both educational and administrative. This project integrates with WhatsApp to ensure greater accessibility and ease of use.</p>
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
+					<TechItem >
+						<HuggingFaceIcon slot='svg' class="size-8" />
+					</TechItem>
+					<TechItem >
+						<PythonIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<CPlusPlusIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<NvidiaIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<OllamaIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+
+			<Project class="" title="Orbit Business" srcImage="./orbit.png">
+				<p slot="description" class="text-sm font-semibold text-pretty">Mini ERP designed specifically for comprehensive business management, focusing on project management and efficient control of product storage, among other fundamental procedures.</p> 
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
+					<TechItem >
+						<LaravelIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<LivewireIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<TailwindIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<MySQLIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+
+			<Project class="" title="Neuuni Business" srcImage="./nbusiness.png"> 
+				<p slot="description" class="text-sm font-semibold text-pretty">Landing page designed for lead generation, focusing on creating agreements with companies and businesses. We prioritize user experience, ensuring that navigation is simple and relevant information is easily accessible.</p>
+				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
+					<TechItem >
+						<LaravelIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<TailwindIcon slot='svg' class="size-6" />
+					</TechItem>
+					<TechItem >
+						<AlpineIcon slot='svg' class="size-6" />
+					</TechItem>
+				</div>
+			</Project>
+
+			<Project class="" title="Everest CRM" srcImage="./everest.png"> 
+				<p slot="description" class="text-sm font-semibold">This CRM is designed for the effective capture and management of leads from various platforms such as Facebook, Instagram, among others. Its main focus is on optimizing the tracking of sales closing processes, generating detailed reports on these processes. Additionally, it facilitates the retrieval of relevant data for the implementation of more effective marketing strategies.</p>
 				<div slot="tech" class="flex flex-wrap items-center mt-5 gap-3">
 					<TechItem >
 						<LaravelIcon slot='svg' class="size-6" />
@@ -473,6 +623,9 @@ import NodeJS from '../assets/icons/Backend/NodeJS.astro'
 		
 	
 	</section>
+
+
+	
 
 
 </Layout>
